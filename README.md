@@ -1,4 +1,4 @@
-# Trivial automation tool for Eltex switch configuring
+# Trivial automation tool for Eltex MES switches 23xx and 11xx configuring
 
 Files:
 
