@@ -1,6 +1,5 @@
 from netmiko import ConnectHandler
 from env import *
-import time
 
 with open('config_list') as f:
     config_lines = f.read().splitlines()
@@ -21,9 +20,7 @@ for device in ip_lines:
 
     ssh_connect = ConnectHandler(**joint)
 
-    start_time = time.time()
     output = ssh_connect.send_config_set(config_lines)
-    end_time = time.time()
 
     output = ssh_connect.send_command_timing(
         command_string=command_write,
